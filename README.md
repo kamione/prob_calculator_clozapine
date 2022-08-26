@@ -1,7 +1,7 @@
 <div align="center">
 <!-- Title -->
 
-# An individualized probablity calculator for future clozapine use
+# An individualized probablity calculator for future clozapine use in schizophrenia patients
 
 <div align="left">
 <!-- Badges -->
