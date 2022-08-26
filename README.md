@@ -43,10 +43,10 @@ source activate trs_pred
 python app.py
 ```
 
-This will initiate an window.
+This will initiate an application window.
 ![](assets/startup.png)
 
-You may enter the information and press calculate. The predicted probability will be shown.
+You may enter the information and press calculate. The predicted probability will be shown on the right panel.
 ![](assets/example.png)
 
 <!-- Contributing -->
