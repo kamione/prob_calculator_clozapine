@@ -87,32 +87,32 @@ class App(ttk.Window):
         # define the input
         lb1 = ttk.Label(
             master=tab,
-            text='1. Is schizophrenia diagnosis?',
+            text='1. Age at first service contact',
             font=('Helvetica Neuw', 14),
             width=35
         )
         lb1.grid(row=0, column=0, padx=5, pady=5, ipadx=5, ipady=5, sticky='W')
-        self.lb1_options = ttk.StringVar(tab)
-        self.lb1_options.set('Yes')  # default value
-        lb1_om = ttk.OptionMenu(
-            tab, self.lb1_options, self.lb1_options.get(), 'Yes', 'No')
-        lb1_om.grid(row=0, column=1, padx=5, pady=5,
-                    ipadx=5, ipady=5, sticky='EW')
+        self.lb1_input = ttk.Entry(tab, width=10)
+        self.lb1_input.grid(row=0, column=1, padx=5, pady=5,
+                            ipadx=5, ipady=5, sticky='EW')
 
         lb2 = ttk.Label(
             master=tab,
-            text='2. Age at 1st presentation',
+            text='2. Is schizophrenia diagnosis?',
             font=('Helvetica Neuw', 14),
             width=35
         )
         lb2.grid(row=1, column=0, padx=5, pady=5, ipadx=5, ipady=5, sticky='W')
-        self.lb2_input = ttk.Entry(tab, width=10)
-        self.lb2_input.grid(row=1, column=1, padx=5, pady=5,
-                            ipadx=5, ipady=5, sticky='EW')
+        self.lb2_options = ttk.StringVar(tab)
+        self.lb2_options.set('Yes')  # default value
+        lb2_om = ttk.OptionMenu(
+            tab, self.lb2_options, self.lb2_options.get(), 'Yes', 'No')
+        lb2_om.grid(row=1, column=1, padx=5, pady=5,
+                    ipadx=5, ipady=5, sticky='EW')
 
         lb3 = ttk.Label(
             master=tab,
-            text='3. Number of days of untreated psychosis',
+            text='3. Age of illness onset',
             font=('Helvetica Neuw', 14),
             width=35
         )
@@ -123,7 +123,7 @@ class App(ttk.Window):
 
         lb4 = ttk.Label(
             master=tab,
-            text='4. Number of hospitalized days during 1st episode',
+            text='4. Days of untreated psychosis',
             font=('Helvetica Neuw', 14),
             width=35
         )
@@ -134,7 +134,7 @@ class App(ttk.Window):
 
         lb5 = ttk.Label(
             master=tab,
-            text='5. Defined daily dose',
+            text='5. Years of education',
             font=('Helvetica Neuw', 14),
             width=35
         )
@@ -145,7 +145,7 @@ class App(ttk.Window):
 
         lb6 = ttk.Label(
             master=tab,
-            text='6. Age of onset',
+            text='6. CGI depressive score',
             font=('Helvetica Neuw', 14),
             width=35
         )
@@ -156,7 +156,7 @@ class App(ttk.Window):
 
         lb7 = ttk.Label(
             master=tab,
-            text='7. Number of days of 1st episode',
+            text='7. Hospitalized days during first episode',
             font=('Helvetica Neuw', 14),
             width=35
         )
@@ -167,7 +167,7 @@ class App(ttk.Window):
 
         lb8 = ttk.Label(
             master=tab,
-            text='8. CGI depression score',
+            text='8. Mean of defined daily dose',
             font=('Helvetica Neuw', 14),
             width=35
         )
@@ -178,7 +178,7 @@ class App(ttk.Window):
 
         lb9 = ttk.Label(
             master=tab,
-            text='9. Years of education',
+            text='9. SOFAS score',
             font=('Helvetica Neuw', 14),
             width=35
         )
@@ -189,7 +189,7 @@ class App(ttk.Window):
 
         lb10 = ttk.Label(
             master=tab,
-            text='10. SOFAS',
+            text='10. Days of first episode',
             font=('Helvetica Neuw', 14),
             width=35
         )
@@ -203,34 +203,34 @@ class App(ttk.Window):
         # define the input
         lb11 = ttk.Label(
             master=tab,
-            text='1. Is schizophrenia diagnosis?',
+            text='1. Age at frist service contact',
             font=('Helvetica Neuw', 14),
             width=35
         )
         lb11.grid(row=0, column=0, padx=5, pady=5,
                   ipadx=5, ipady=5, sticky='W')
-        self.lb11_options = ttk.StringVar(tab)
-        self.lb11_options.set('Yes')  # default value
-        lb11_om = ttk.OptionMenu(
-            tab, self.lb11_options, self.lb11_options.get(), 'Yes', 'No')
-        lb11_om.grid(row=0, column=1, padx=5, pady=5,
-                     ipadx=5, ipady=5, sticky='EW')
+        self.lb11_input = ttk.Entry(tab, width=10)
+        self.lb11_input.grid(row=-0, column=1, padx=5, pady=5,
+                             ipadx=5, ipady=5, sticky='EW')
 
         lb12 = ttk.Label(
             master=tab,
-            text='2. Age at 1st presentation',
+            text='2. Is schizophrenia diagnosis?',
             font=('Helvetica Neuw', 14),
             width=35
         )
         lb12.grid(row=1, column=0, padx=5, pady=5,
                   ipadx=5, ipady=5, sticky='W')
-        self.lb12_input = ttk.Entry(tab, width=10)
-        self.lb12_input.grid(row=1, column=1, padx=5, pady=5,
-                             ipadx=5, ipady=5, sticky='EW')
+        self.lb12_options = ttk.StringVar(tab)
+        self.lb12_options.set('Yes')  # default value
+        lb12_om = ttk.OptionMenu(
+            tab, self.lb12_options, self.lb12_options.get(), 'Yes', 'No')
+        lb12_om.grid(row=1, column=1, padx=5, pady=5,
+                     ipadx=5, ipady=5, sticky='EW')
 
         lb13 = ttk.Label(
             master=tab,
-            text='3. Number of months of relapses',
+            text='3. Age of illness onset',
             font=('Helvetica Neuw', 14),
             width=35
         )
@@ -242,7 +242,7 @@ class App(ttk.Window):
 
         lb14 = ttk.Label(
             master=tab,
-            text='4. Mean of SOFAS',
+            text='4. Months of relapse',
             font=('Helvetica Neuw', 14),
             width=35
         )
@@ -254,7 +254,7 @@ class App(ttk.Window):
 
         lb15 = ttk.Label(
             master=tab,
-            text='5. Age of onset',
+            text='5. Months of anticholinergic',
             font=('Helvetica Neuw', 14),
             width=35
         )
@@ -266,7 +266,7 @@ class App(ttk.Window):
 
         lb16 = ttk.Label(
             master=tab,
-            text='6. Months of anticholinergic',
+            text='6. Mean of SOFAS scores',
             font=('Helvetica Neuw', 14),
             width=35
         )
@@ -278,49 +278,46 @@ class App(ttk.Window):
 
         lb17 = ttk.Label(
             master=tab,
-            text='7. Mean of CGI positive symptoms',
+            text='7. Receiving early intervention service?',
             font=('Helvetica Neuw', 14),
             width=35
         )
         lb17.grid(row=6, column=0, padx=5, pady=5,
                   ipadx=5, ipady=5, sticky='W')
-        self.lb17_input = ttk.Entry(tab, width=10)
-        self.lb17_input.grid(row=6, column=1, padx=5, pady=5,
-                             ipadx=5, ipady=5, sticky='EW')
+        self.lb17_options = ttk.StringVar(tab)
+        self.lb17_options.set('Yes')  # default value
+        lb17_om = ttk.OptionMenu(
+            tab, self.lb17_options, self.lb17_options.get(), 'Yes', 'No')
+        lb17_om.grid(row=6, column=1, padx=5, pady=5,
+                     ipadx=5, ipady=5, sticky='EW')
 
         lb18 = ttk.Label(
             master=tab,
-            text='8. Receiving early intervention service?',
+            text='8. Mean of defined daily dose',
             font=('Helvetica Neuw', 14),
             width=35
         )
         lb18.grid(row=7, column=0, padx=5, pady=5,
                   ipadx=5, ipady=5, sticky='W')
-        self.lb18_options = ttk.StringVar(tab)
-        self.lb18_options.set('Yes')  # default value
-        lb18_om = ttk.OptionMenu(
-            tab, self.lb18_options, self.lb18_options.get(), 'Yes', 'No')
-        lb18_om.grid(row=7, column=1, padx=5, pady=5,
-                     ipadx=5, ipady=5, sticky='EW')
+        self.lb18_input = ttk.Entry(tab, width=10)
+        self.lb18_input.grid(row=7, column=1, padx=5, pady=5,
+                             ipadx=5, ipady=5, sticky='EW')
 
         lb19 = ttk.Label(
             master=tab,
-            text='9. Is affective type?',
+            text='9. Days of untreated psychosis',
             font=('Helvetica Neuw', 14),
             width=35
         )
         lb19.grid(row=8, column=0, padx=5, pady=5,
                   ipadx=5, ipady=5, sticky='W')
-        self.lb19_options = ttk.StringVar(tab)
-        self.lb19_options.set('Yes')  # default value
-        lb19_om = ttk.OptionMenu(
-            tab, self.lb19_options, self.lb19_options.get(), 'Yes', 'No')
-        lb19_om.grid(row=8, column=1, padx=5, pady=5,
-                     ipadx=5, ipady=5, sticky='EW')
+        self.lb19_input = ttk.Entry(tab, width=10)
+        self.lb19_input.grid(row=8, column=1, padx=5, pady=5,
+                             ipadx=5, ipady=5, sticky='EW')
 
         lb20 = ttk.Label(
             master=tab,
-            text='10. Mean of defined daily dose',
+            text='10. Mean of CGI positive symptoms',
             font=('Helvetica Neuw', 14),
             width=35
         )
@@ -334,22 +331,19 @@ class App(ttk.Window):
         # define the input
         lb21 = ttk.Label(
             master=tab,
-            text='1. Is schizophrenia diagnosis?',
+            text='1. Months of relapse',
             font=('Helvetica Neuw', 14),
             width=35
         )
         lb21.grid(row=0, column=0, padx=5, pady=5,
                   ipadx=5, ipady=5, sticky='W')
-        self.lb21_options = ttk.StringVar(tab)
-        self.lb21_options.set('Yes')  # default value
-        lb21_om = ttk.OptionMenu(
-            tab, self.lb21_options, self.lb21_options.get(), 'Yes', 'No')
-        lb21_om.grid(row=0, column=1, padx=5, pady=5,
-                     ipadx=5, ipady=5, sticky='EW')
+        self.lb21_input = ttk.Entry(tab, width=10)
+        self.lb21_input.grid(row=0, column=1, padx=5, pady=5,
+                             ipadx=5, ipady=5, sticky='EW')
 
         lb22 = ttk.Label(
             master=tab,
-            text='2. Number of months of relapses',
+            text='2. Age at first service contact',
             font=('Helvetica Neuw', 14),
             width=35
         )
@@ -361,19 +355,22 @@ class App(ttk.Window):
 
         lb23 = ttk.Label(
             master=tab,
-            text='3. Number of months of anticholinergic',
+            text='3. Is schizophrenia diagnosis?',
             font=('Helvetica Neuw', 14),
             width=35
         )
         lb23.grid(row=2, column=0, padx=5, pady=5,
                   ipadx=5, ipady=5, sticky='W')
-        self.lb23_input = ttk.Entry(tab, width=10)
-        self.lb23_input.grid(row=2, column=1, padx=5, pady=5,
-                             ipadx=5, ipady=5, sticky='EW')
+        self.lb23_options = ttk.StringVar(tab)
+        self.lb23_options.set('Yes')  # default value
+        lb23_om = ttk.OptionMenu(
+            tab, self.lb23_options, self.lb23_options.get(), 'Yes', 'No')
+        lb23_om.grid(row=2, column=1, padx=5, pady=5,
+                     ipadx=5, ipady=5, sticky='EW')
 
         lb24 = ttk.Label(
             master=tab,
-            text='4. Age at 1st presentation',
+            text='4. Mean of daily defined dose',
             font=('Helvetica Neuw', 14),
             width=35
         )
@@ -385,7 +382,7 @@ class App(ttk.Window):
 
         lb25 = ttk.Label(
             master=tab,
-            text='5. Mean of CGI positive symptom',
+            text='5. Months of anticholinergic',
             font=('Helvetica Neuw', 14),
             width=35
         )
@@ -397,7 +394,7 @@ class App(ttk.Window):
 
         lb26 = ttk.Label(
             master=tab,
-            text='6. Mean of defined daily dose',
+            text='6. Mean of CGI positive symptoms',
             font=('Helvetica Neuw', 14),
             width=35
         )
@@ -409,7 +406,7 @@ class App(ttk.Window):
 
         lb27 = ttk.Label(
             master=tab,
-            text='7. Number of months of poly drug uses',
+            text='7. Age of illness onset',
             font=('Helvetica Neuw', 14),
             width=35
         )
@@ -421,22 +418,19 @@ class App(ttk.Window):
 
         lb28 = ttk.Label(
             master=tab,
-            text='8. Is affective type?',
+            text='8. MSSD of CGI positive symptoms',
             font=('Helvetica Neuw', 14),
             width=35
         )
         lb28.grid(row=7, column=0, padx=5, pady=5,
                   ipadx=5, ipady=5, sticky='W')
-        self.lb28_options = ttk.StringVar(tab)
-        self.lb28_options.set('Yes')  # default value
-        lb28_om = ttk.OptionMenu(
-            tab, self.lb28_options, self.lb28_options.get(), 'Yes', 'No')
-        lb28_om.grid(row=7, column=1, padx=5, pady=5,
-                     ipadx=5, ipady=5, sticky='EW')
+        self.lb28_input = ttk.Entry(tab, width=10)
+        self.lb28_input.grid(row=7, column=1, padx=5, pady=5,
+                             ipadx=5, ipady=5, sticky='EW')
 
         lb29 = ttk.Label(
             master=tab,
-            text='9. Mean of SOFAS',
+            text='9. Mean of SOFAS scores',
             font=('Helvetica Neuw', 14),
             width=35
         )
@@ -448,7 +442,7 @@ class App(ttk.Window):
 
         lb30 = ttk.Label(
             master=tab,
-            text='10. Age of onset',
+            text='10. Months of poly drug uses',
             font=('Helvetica Neuw', 14),
             width=35
         )
@@ -462,22 +456,19 @@ class App(ttk.Window):
         # define the input
         lb31 = ttk.Label(
             master=tab,
-            text='1. Is schizophrenia diagnosis?',
+            text='1. Months of anticholinergic',
             font=('Helvetica Neuw', 14),
             width=35
         )
         lb31.grid(row=0, column=0, padx=5, pady=5,
                   ipadx=5, ipady=5, sticky='W')
-        self.lb31_options = ttk.StringVar(tab)
-        self.lb31_options.set('Yes')  # default value
-        lb31_om = ttk.OptionMenu(
-            tab, self.lb31_options, self.lb31_options.get(), 'Yes', 'No')
-        lb31_om.grid(row=0, column=1, padx=5, pady=5,
-                     ipadx=5, ipady=5, sticky='EW')
+        self.lb31_input = ttk.Entry(tab, width=10)
+        self.lb31_input.grid(row=0, column=1, padx=5, pady=5,
+                             ipadx=5, ipady=5, sticky='EW')
 
         lb32 = ttk.Label(
             master=tab,
-            text='2. Number of months of anticholinergic',
+            text='2. Months of relapse',
             font=('Helvetica Neuw', 14),
             width=35
         )
@@ -489,19 +480,22 @@ class App(ttk.Window):
 
         lb33 = ttk.Label(
             master=tab,
-            text='3. Number of months of relapses',
+            text='3. Is schizophrenia diagnosis?',
             font=('Helvetica Neuw', 14),
             width=35
         )
         lb33.grid(row=2, column=0, padx=5, pady=5,
                   ipadx=5, ipady=5, sticky='W')
-        self.lb33_input = ttk.Entry(tab, width=10)
-        self.lb33_input.grid(row=2, column=1, padx=5, pady=5,
-                             ipadx=5, ipady=5, sticky='EW')
+        self.lb33_options = ttk.StringVar(tab)
+        self.lb33_options.set('Yes')  # default value
+        lb33_om = ttk.OptionMenu(
+            tab, self.lb33_options, self.lb33_options.get(), 'Yes', 'No')
+        lb33_om.grid(row=2, column=1, padx=5, pady=5,
+                     ipadx=5, ipady=5, sticky='EW')
 
         lb34 = ttk.Label(
             master=tab,
-            text='4. Mean of CGI postive symptoms',
+            text='4. MSSD of CGI postive symptoms',
             font=('Helvetica Neuw', 14),
             width=35
         )
@@ -525,7 +519,7 @@ class App(ttk.Window):
 
         lb36 = ttk.Label(
             master=tab,
-            text='6. MSSD of CGI positive symptom',
+            text='6. Mean of CGI positive symptom',
             font=('Helvetica Neuw', 14),
             width=35
         )
@@ -548,23 +542,20 @@ class App(ttk.Window):
                              ipadx=5, ipady=5, sticky='EW')
 
         lb38 = ttk.Label(
-            tab,
-            text='8. Is affective type?',
+            master=tab,
+            text='8. Age at first service contact',
             font=('Helvetica Neuw', 14),
             width=35
         )
         lb38.grid(row=7, column=0, padx=5, pady=5,
                   ipadx=5, ipady=5, sticky='W')
-        self.lb38_options = ttk.StringVar(tab)
-        self.lb38_options.set('Yes')  # default value
-        lb38_om = ttk.OptionMenu(
-            tab, self.lb38_options, self.lb38_options.get(), 'Yes', 'No')
-        lb38_om.grid(row=7, column=1, padx=5, pady=5,
-                     ipadx=5, ipady=5, sticky='EW')
+        self.lb38_input = ttk.Entry(tab, width=10)
+        self.lb38_input.grid(row=7, column=1, padx=5, pady=5,
+                             ipadx=5, ipady=5, sticky='EW')
 
         lb39 = ttk.Label(
             master=tab,
-            text='9. Age at 1st presentation',
+            text='9. Months of hospitalization',
             font=('Helvetica Neuw', 14),
             width=35
         )
@@ -576,7 +567,7 @@ class App(ttk.Window):
 
         lb40 = ttk.Label(
             master=tab,
-            text='10. Mean of SOFAS',
+            text='10. Months of substance abuse',
             font=('Helvetica Neuw', 14),
             width=35
         )
@@ -602,8 +593,8 @@ class App(ttk.Window):
     def save_data(self):
         selected_page = self.notebook.index(self.notebook.select())
         nb1_output = [
-            self.lb1_options.get(),
-            self.lb2_input.get(),
+            self.lb1_input.get(),
+            self.lb2_options.get(),
             self.lb3_input.get(),
             self.lb4_input.get(),
             self.lb5_input.get(),
@@ -614,38 +605,38 @@ class App(ttk.Window):
             self.lb10_input.get()
         ]
         nb2_output = [
-            self.lb11_options.get(),
-            self.lb12_input.get(),
+            self.lb11_input.get(),
+            self.lb12_options.get(),
             self.lb13_input.get(),
             self.lb14_input.get(),
             self.lb15_input.get(),
             self.lb16_input.get(),
-            self.lb17_input.get(),
-            self.lb18_options.get(),
-            self.lb19_options.get(),
+            self.lb17_options.get(),
+            self.lb18_input.get(),
+            self.lb19_input.get(),
             self.lb20_input.get()
         ]
         nb3_output = [
-            self.lb21_options.get(),
+            self.lb21_input.get(),
             self.lb22_input.get(),
-            self.lb23_input.get(),
+            self.lb23_options.get(),
             self.lb24_input.get(),
             self.lb25_input.get(),
             self.lb26_input.get(),
             self.lb27_input.get(),
-            self.lb28_options.get(),
+            self.lb28_input.get(),
             self.lb29_input.get(),
             self.lb30_input.get()
         ]
         nb4_output = [
-            self.lb31_options.get(),
+            self.lb31_input.get(),
             self.lb32_input.get(),
-            self.lb33_input.get(),
+            self.lb33_options.get(),
             self.lb34_input.get(),
             self.lb35_input.get(),
             self.lb36_input.get(),
             self.lb37_input.get(),
-            self.lb38_options.get(),
+            self.lb38_input.get(),
             self.lb39_input.get(),
             self.lb40_input.get()
         ]
@@ -723,11 +714,14 @@ class App(ttk.Window):
             filename = Path(
                 'models', 'baseline_allsubjs_top10_finalized_model.sav')
             # log transform DUP days
-            if transformed_te_x[2] > 0:
-                transformed_te_x[2] = np.log(transformed_te_x[2])
+            if transformed_te_x[3] > 0:
+                transformed_te_x[3] = np.log(transformed_te_x[3])
         elif selected_page == 1:
             filename = Path(
                 'models', '12m_allsubjs_top10_finalized_model.sav')
+            # log transform DUP days
+            if transformed_te_x[8] > 0:
+                transformed_te_x[8] = np.log(transformed_te_x[8])
         elif selected_page == 2:
             filename = Path(
                 'models', '24m_allsubjs_top10_finalized_model.sav')
